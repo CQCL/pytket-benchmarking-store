@@ -8,6 +8,6 @@ jobs:
       - uses: actions/checkout@v4
       - run: echo hi there
       - run: |
-        eval `ssh-agent -s`
-        ssh-add - <<< '${{ secrets.PYTKET_BENCHMARKING_DEPLOY_KEY }}'
+          eval `ssh-agent -s`
+          ssh-add - <<< '${{ secrets.PYTKET_BENCHMARKING_DEPLOY_KEY }}'
       - run: git clone git@github.com:CQCL/pytket-benchmarking.git
