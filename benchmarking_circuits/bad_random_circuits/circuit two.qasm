@@ -1,5 +1,1 @@
-OPENQASM 2.0;
-include "qelib1.inc";
-
-qreg q[1];
-z q[0];
+"OPENQASM 2.0;\ninclude \"qelib1.inc\";\n\nqreg q[1];\nz q[0];\n"
