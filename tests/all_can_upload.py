@@ -1,7 +1,7 @@
 from pytket_benchmarking.circuit_suite.circuit_suite_manager import CircuitSuiteManager
 from pathlib import Path
 
-for path in Path("../benchmarking_circuits").iterdir():
+for path in Path("benchmarking_circuits").iterdir():
     circuit_suite_mgr = CircuitSuiteManager(
         directory_path=path
     )
