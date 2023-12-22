@@ -17,3 +17,6 @@ jobs:
 
       - name: Checkout pytket_benchmarking_store
         uses: actions/checkout@v4
+
+      - name: Check all can upload
+        run: python tests/all_can_upload.py
