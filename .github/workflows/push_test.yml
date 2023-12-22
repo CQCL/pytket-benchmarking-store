@@ -5,9 +5,8 @@ jobs:
   check-all-valid:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: echo hi there
-      - run: |
-          eval `ssh-agent -s`
-          ssh-add - <<< '${{ secrets.PYTKET_BENCHMARKING_DEPLOY_KEY }}'
-      - run: git clone git@github.com:CQCL/pytket-benchmarking.git
+      - uses: actions/checkout@v2
+        with:
+          ssh-key: ${{ secrets.PYTKET_BENCHMARKING_DEPLOY_KEY }}
+          repository: CQCL/pytket-benchmarking
+      - run: ls
