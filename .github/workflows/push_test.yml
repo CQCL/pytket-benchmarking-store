@@ -4,7 +4,8 @@ run-name: Test all valid suites
 on: 
   pull_request:
   push:
-    branch: main
+    branches:
+      - 'main'
   workflow_dispatch:
   schedule:
     - cron: 0 0 * * *
