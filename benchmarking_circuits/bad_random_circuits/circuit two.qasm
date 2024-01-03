@@ -1,1 +1,0 @@
-"OPENQASM 2.0;\ninclude \"qelib1.inc\";\n\nqreg q[1];\nz q[0];\n"

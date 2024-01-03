@@ -1,9 +1,11 @@
 from pytket_benchmarking.circuit_suite.circuit_suite_manager import CircuitSuiteManager
+from pytket_benchmarking.utils.storage_manager import LocalStorage
 from pathlib import Path
 
-for path in Path("benchmarking_circuits").iterdir():
+for directory_path in Path("benchmarking_circuits").iterdir():
+    storage_manager = LocalStorage(directory_path=directory_path)
     circuit_suite_mgr = CircuitSuiteManager(
-        directory_path=path
+        storage_manager=storage_manager
     )
     if not circuit_suite_mgr.can_upload:
-        raise Exception(f"{path} is not a valid circuit suite.")
+        raise Exception(f"{directory_path} is not a valid circuit suite.")
