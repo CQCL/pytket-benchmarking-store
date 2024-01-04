@@ -1,0 +1,64 @@
+OPENQASM 2.0;
+include "qelib1.inc";
+
+qreg q[11];
+gate v vq0 {
+u3(0.5*pi,1.5*pi,0.5*pi) vq0;
+}
+v q[1];
+v q[2];
+h q[3];
+h q[6];
+v q[8];
+v q[9];
+h q[10];
+cx q[5],q[1];
+cx q[10],q[2];
+cx q[3],q[7];
+cx q[4],q[8];
+cx q[1],q[2];
+cx q[8],q[7];
+cx q[7],q[2];
+cx q[0],q[2];
+rz(2.519717774238608*pi) q[2];
+cx q[0],q[2];
+cx q[7],q[2];
+cx q[1],q[2];
+cx q[8],q[7];
+cx q[5],q[1];
+cx q[10],q[2];
+cx q[3],q[7];
+cx q[4],q[8];
+gate vdg vdgq0 {
+u3(3.5*pi,1.5*pi,0.5*pi) vdgq0;
+}
+vdg q[1];
+vdg q[2];
+h q[3];
+v q[5];
+cx q[9],q[7];
+vdg q[8];
+h q[10];
+cx q[0],q[8];
+cx q[1],q[2];
+v q[3];
+cx q[4],q[5];
+cx q[7],q[2];
+cx q[3],q[6];
+cx q[5],q[6];
+cx q[2],q[6];
+cx q[8],q[6];
+rz(3.054149478340485*pi) q[6];
+cx q[8],q[6];
+cx q[0],q[8];
+cx q[2],q[6];
+cx q[7],q[2];
+cx q[5],q[6];
+cx q[1],q[2];
+cx q[3],q[6];
+cx q[4],q[5];
+cx q[9],q[7];
+vdg q[3];
+vdg q[5];
+h q[6];
+vdg q[9];
