@@ -13,7 +13,6 @@ def process_qasm_files(directory):
                 qasm_str = qasm_file.read()
                 circuit: Circuit = circuit_from_qasm_str(qasm_str)
                 circuit.name = filename[:-5]
-                print(circuit.name)
 
             # Create a new JSON file name
             json_filename = filename.replace(".qasm", ".json")
