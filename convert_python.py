@@ -2,7 +2,6 @@ import os
 import json
 from pytket import Circuit
 from pytket.qasm import circuit_from_qasm_str
-from typing import List
 
 
 def process_qasm_files(directory: str) -> None:
@@ -23,7 +22,6 @@ def process_qasm_files(directory: str) -> None:
 
             os.remove(qasm_filepath)
             print(f"Processed: {filename} -> {json_filename}")
-
 
 
 for subdir in os.listdir(os.getcwd() + "/benchmarking_circuits/"):
