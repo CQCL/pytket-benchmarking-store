@@ -27,5 +27,5 @@ def process_qasm_files(directory):
             print(f"Processed: {filename} -> {json_filename}")
 
 # Replace 'your_directory_path' with the path to the directory containing your QASM files
-circuits_to_remove:str = "queko"
+circuits_to_remove:str = "pauli_gadget"
 process_qasm_files(os.getcwd() + "/benchmarking_circuits/" + circuits_to_remove + "/")
