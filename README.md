@@ -8,7 +8,7 @@ Install [pytket-benchmarking](https://github.com/CQCL/pytket-benchmarking/tree/m
 ```
 from pathlib import Path
 
-from pytket_benchmarking.circuit_suite import CircuitSuiteManager
+from pytket_benchmarking.compiler_benchmarking import CircuitSuiteManager
 from pytket_benchmarking.utils.storage_manager import LocalStorage
 
 ## To be defined by the user ##
@@ -19,7 +19,7 @@ circuits = ...  # A list of pytket circuits that you have generated
 
 ## Script to generate the circuit suite on appropriate format ##
 directory_path = Path("benchmarking_circuits/"+new_directory)
-storage_manager = LocalStorage(directory_path=directory_path)
+storage_manager = LocalStorage(directory_path=directory_path, write_permission=True)
 circuit_suite_mgr = CircuitSuiteManager(storage_manager=storage_manager)
 
 # Add each circuit to the suite
