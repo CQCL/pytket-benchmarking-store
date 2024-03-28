@@ -1,1 +1,1 @@
-Stalwart set of circuits for mainly implementing classical functions as provided by IBM many a year ago for the purpose of benchmarking routing performance.
+Circuits for mainly implementing classical functions as provided by IBM for the purpose of benchmarking routing performance.
