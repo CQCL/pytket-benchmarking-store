@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you are using circuits in this store as part of you publication, and citing a paper in the README of a circuit suite is not relevant, please cite it as below."
+authors:
+- family-names: "Daniel"
+  given-names: "Mills"
+- family-names: "Pablo"
+  given-names: "Andres-Martinez"
+- family-names: "Silas"
+  given-names: "Dilkes"
+- family-names: "Alec"
+  given-names: "Edgington"
+- family-names: "Yao"
+  given-names: "Tang"
+title: "Pytket Benchmarking Store"
+date-released: 2023-12-22
+url: "https://github.com/CQCL/pytket-benchmarking-store"
