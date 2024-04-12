@@ -19,6 +19,10 @@ Each suite is contained within its own directory.
 These directories consist of three components:
 - **Circuits**: The circuits in each suite are serialised [pytket circuits](https://tket.quantinuum.com/api-docs/circuit_class.html).
     Serialised forms of pytket circuits are created using the [`.to_dict()`](https://tket.quantinuum.com/api-docs/circuit_class.html#pytket.circuit.Circuit.to_dict) method which should be saved as a json file.
+    For more information on importing and exporting circuits to and from pytket please see the
+    [Importing/Exporting Circuit](https://tket.quantinuum.com/user-manual/manual_circuit.html#importing-exporting-circuits)
+    section of the pytket manual.
+    
     Note that each of the circuits must have a the [`name`](https://tket.quantinuum.com/api-docs/circuit_class.html#pytket.circuit.Circuit.name) attribute assigned, and this must match the name of the file where its serialised form is saved.
 - **README.txt**: Each suite includes a `README.txt` file which gives some detail of the circuit suite.
     Such details might be the sizes of the circuits, or the paper which inspired them.
