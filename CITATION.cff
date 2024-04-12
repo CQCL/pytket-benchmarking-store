@@ -1,16 +1,46 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
-message: "If you are using circuits in this store as part of you publication, and citing a paper in the README of a circuit suite is not relevant, please cite it as below."
+title: Pytket Benchmarking Store
+message: >-
+  If you are using circuits in this store as part of you
+  publication, and citing a paper in the README of a circuit
+  suite is not appropriate, please cite this repository as
+  follows.
+type: dataset
 authors:
-- family-names: "Daniel"
-  given-names: "Mills"
-- family-names: "Pablo"
-  given-names: "Andres-Martinez"
-- family-names: "Silas"
-  given-names: "Dilkes"
-- family-names: "Alec"
-  given-names: "Edgington"
-- family-names: "Yao"
-  given-names: "Tang"
-title: "Pytket Benchmarking Store"
-date-released: 2023-12-22
-url: "https://github.com/CQCL/pytket-benchmarking-store"
+  - given-names: Daniel
+    family-names: Mills
+    email: daniel.mills@quantinuum.com
+    affiliation: Quantinuum
+    orcid: 'https://orcid.org/0000-0001-5902-3774'
+  - orcid: 'https://orcid.org/0000-0003-2186-0379'
+    given-names: Silas
+    family-names: Dilkes
+    email: silas.dilkes@quantinuum.com
+    affiliation: Quantinuum
+  - given-names: Pablo
+    family-names: Andres-Martinez
+    email: pablo.andresmartinez@quantinuum.com
+    affiliation: Quantinuum
+    orcid: 'https://orcid.org/0000-0003-4456-7052'
+  - given-names: Alec
+    family-names: Edgington
+    email: alec.edgington@quantinuum.com
+    affiliation: Quantinuum
+  - given-names: Yao
+    family-names: Tang
+    email: yao.tang@quantinuum.com
+    affiliation: Quantinuum
+repository-code: 'https://github.com/CQCL/pytket-benchmarking-store'
+abstract: >-
+  A centralised store of circuits used for benchmarking in
+  publications by Quantinuum's TKET team. These circuits are
+  also used for day-to-day benchmarking of the TKET
+  compiler.
+keywords:
+  - Quantum Computation
+  - Quantum Compilation
+  - Benchmarking
+license: Apache-2.0

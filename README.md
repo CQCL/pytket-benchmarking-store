@@ -6,12 +6,11 @@ These circuits are also used for day-to-day benchmarking of the TKET compiler.
 # How to contribute
 
 To contribute a circuit suite to this repository please make a PR into the main branch
-and assign a member Quantinuum's TKET team as a reviewer.
+and assign a member of Quantinuum's TKET team as a reviewer.
 
 The following describes the format the circuit suite should be in.
-If available, this format can be automatically constructed by the
-[pytket-benchmarking](https://github.com/CQCL/pytket-benchmarking/tree/main)
-python library as discussed below.
+If available to you, [pytket-benchmarking](https://github.com/CQCL/pytket-benchmarking/tree/main)
+can automatically construct this format as discussed below.
 
 ## Suites of Circuits
 
@@ -19,7 +18,7 @@ Circuit suites are stored in `benchmarking_circuits/` folder.
 Each suite is contained within its own directory.
 These directories consist of three components:
 - **Circuits**: The circuits in each suite are serialised [pytket circuits](https://tket.quantinuum.com/api-docs/circuit_class.html).
-    Serialised forms of pytket circuits are created using the [`.to_dict()`](https://tket.quantinuum.com/api-docs/circuit_class.html#pytket.circuit.Circuit.to_dict) method which may be saved as a json file.
+    Serialised forms of pytket circuits are created using the [`.to_dict()`](https://tket.quantinuum.com/api-docs/circuit_class.html#pytket.circuit.Circuit.to_dict) method which should be saved as a json file.
     Note that each of the circuits must have a the [`name`](https://tket.quantinuum.com/api-docs/circuit_class.html#pytket.circuit.Circuit.name) attribute assigned, and this must match the name of the file where its serialised form is saved.
 - **README.txt**: Each suite includes a `README.txt` file which gives some detail of the circuit suite.
     Such details might be the sizes of the circuits, or the paper which inspired them.
@@ -33,7 +32,7 @@ These directories consist of three components:
     The [`to_pickle`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_pickle.html) method can then be used on this DataFrame to construct `data.pkl`.
 
 A directory containing these three components can be uploaded as a circuit suite via a pull request.
-Note that there are test run on the opening of Pull Requests which will check that the circuit suite is correctly formatted.
+Note that there are tests run on the opening of Pull Requests which will check that the circuit suite is correctly formatted.
 
 ## With [pytket-benchmarking](https://github.com/CQCL/pytket-benchmarking/tree/main)
 
@@ -77,7 +76,6 @@ Now you just need to `git add` the folder created within `benchmarking_circuits`
 
 # Referencing
 
-If you are using these circuits in a publication a reference may be appropriate.
 Where relevant the `README.txt` includes information about the origins of the circuits included.
-If no such reference exists, or to otherwise cite this repository, see `CITATION.cff`
+If no such reference exists, or to otherwise cite this repository, see `CITATION.cff`,
 or "cite this repository" in the repository landing page.
