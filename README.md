@@ -30,7 +30,7 @@ These directories consist of three components:
 - **data.pkl**: Each suite includes a [panda DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
     which contains information about each of the circuits.
     When constricting this DataFrame is must include a row for each circuit.
-    It must also include atleast the columns: 'name', containing the name of the ciruit; 'width', containing the number of qubits in the circuit; and 'label', containing an additional label describing the class of circuits that the circuit belongs to.
+    It must also include at least the columns: 'name', containing the name of the circuit; 'width', containing the number of qubits in the circuit; and 'label', containing an additional label describing the class of circuits that the circuit belongs to.
     Note that the 'label' column may contain `None` if there is no such additional label necessary.
     Additional columns may be optionally included.
     The [`to_pickle`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_pickle.html) method can then be used on this DataFrame to construct `data.pkl`.
