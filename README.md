@@ -1,9 +1,47 @@
 # pytket-benchmarking-store
-A store of circuits for use with pytket-benchmarking
 
-## How to contribute
+A centralised store of circuits used for benchmarking in publications by Quantinuum's TKET team.
+These circuits are also used for day-to-day benchmarking of the TKET compiler.
 
-Install [pytket-benchmarking](https://github.com/CQCL/pytket-benchmarking/tree/main). And adapt the script below to add your own instances of pytket `Circuit`.
+# How to contribute
+
+To contribute a circuit suite to this repository please make a PR into the main branch
+and assign a member of Quantinuum's TKET team as a reviewer.
+
+The following describes the format the circuit suite should be in.
+If available to you, [pytket-benchmarking](https://github.com/CQCL/pytket-benchmarking/tree/main)
+can automatically construct this format as discussed below.
+
+## Suites of Circuits
+
+Circuit suites are stored in `benchmarking_circuits/` folder.
+Each suite is contained within its own directory.
+These directories consist of three components:
+- **Circuits**: The circuits in each suite are serialised [pytket circuits](https://tket.quantinuum.com/api-docs/circuit_class.html).
+    Serialised forms of pytket circuits are created using the [`.to_dict()`](https://tket.quantinuum.com/api-docs/circuit_class.html#pytket.circuit.Circuit.to_dict) method which should be saved as a json file.
+    For more information on importing and exporting circuits to and from pytket please see the
+    [Importing/Exporting Circuit](https://tket.quantinuum.com/user-manual/manual_circuit.html#importing-exporting-circuits)
+    section of the pytket manual.
+    
+    Note that each of the circuits must have a the [`name`](https://tket.quantinuum.com/api-docs/circuit_class.html#pytket.circuit.Circuit.name) attribute assigned, and this must match the name of the file where its serialised form is saved.
+- **README.txt**: Each suite includes a `README.txt` file which gives some detail of the circuit suite.
+    Such details might be the sizes of the circuits, or the paper which inspired them.
+    In general this should provide enough context to allow the suite to be used confidently by a new user.
+- **data.pkl**: Each suite includes a [panda DataFrame](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
+    which contains information about each of the circuits.
+    When constricting this DataFrame is must include a row for each circuit.
+    It must also include at least the columns: 'name', containing the name of the circuit; 'width', containing the number of qubits in the circuit; and 'label', containing an additional label describing the class of circuits that the circuit belongs to.
+    Note that the 'label' column may contain `None` if there is no such additional label necessary.
+    Additional columns may be optionally included.
+    The [`to_pickle`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_pickle.html) method can then be used on this DataFrame to construct `data.pkl`.
+
+A directory containing these three components can be uploaded as a circuit suite via a pull request.
+Note that there are tests run on the opening of Pull Requests which will check that the circuit suite is correctly formatted.
+
+## With [pytket-benchmarking](https://github.com/CQCL/pytket-benchmarking/tree/main)
+
+Constructing a circuit suite is made easier with [pytket-benchmarking](https://github.com/CQCL/pytket-benchmarking/tree/main).
+Install `pytket-benchmarking` and adapt the script below to add your own instances of pytket `Circuit`.
 
 ```
 from pathlib import Path
@@ -40,4 +78,8 @@ If everything went correctly, you will see "Ready to upload? True" when you exec
 
 Now you just need to `git add` the folder created within `benchmarking_circuits`. Please, add your new commit in a separate branch and create a PR to main. This will ensure that sanity checks are executed before adding the changes to main.
 
-For more information see the [tutorial notebook](https://github.com/CQCL/pytket-benchmarking/blob/main/example_notebooks/compiler-benchmarking-tutorial.ipynb), which includes how to use `pytket-benchmarking` tools to generate random circuits and other features.
+# Referencing
+
+Where relevant the `README.txt` includes information about the origins of the circuits included.
+If no such reference exists, or to otherwise cite this repository, see `CITATION.cff`,
+or "cite this repository" in the repository landing page.
