@@ -7,3 +7,5 @@ In the case of circuits in this suite:
 For more details see the papers:
 	 - 'Application-Motivated, Holistic Benchmarking of a Full Quantum Computing Stack'
 	 - 'Phase Gadget Synthesis for Shallow Circuits'
+
+All circuits contain only PauliExpBox.
