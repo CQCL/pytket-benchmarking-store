@@ -1,4 +1,4 @@
-A collection of 62 circuits sampled from four different suites: IBM Classic, Pauli Gadget, Quantum Volume, and UCC Hamiltonian.
+A collection of 66 circuits sampled from four different suites: IBM Classic, Pauli Gadget, Quantum Volume, and UCC Hamiltonian.
 
 IBM Classic (20 circuits):
      - Each circuit contains fewer than 1000 2-qubit gates.
